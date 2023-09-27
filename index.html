@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name='color-scheme' content='light dark'>
+	<title>simple tabs</title>
+</head>
+
+<body>
+	<the-tabs>
+		<div role='tablist'>
+			<button role='tab' aria-selected='true'>Lorem</button>
+			<button role='tab'>Cat</button>
+			<button role='tab'>Cupcake</button>
+		</div>
+
+		<div role='tabpanel'>
+			<p>1: Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia in dicta repellendus non vero nemo velit
+				molestiae assumenda iure obcaecati veniam, voluptate impedit fuga cumque tempore nesciunt totam ad praesentium
+				debitis blanditiis magni, ipsum inventore consectetur eligendi. Nam, sunt praesentium!</p>
+		</div>
+		<div role='tabpanel' hidden>
+			<p>2: i like frogs and 0 gravity kitty loves pigs but stand with legs in litter box, but poop outside sweet beast,
+				so pelt around the house and up and down stairs chasing phantoms yet litter kitter kitty litty little kitten big
+				roar roar feed me. Intrigued by the shower eat all the power cords so sugar, my siamese, stalks me (in a good
+				way), day and night yet run at 3am. Meow all night this human feeds me.</p>
+		</div>
+		<div role='tabpanel' hidden>
+			<p>3: Jelly apple pie muffin oat cake jelly beans. Ice cream cake sesame snaps topping pudding icing apple pie.
+				Marzipan chocolate bar cake tootsie roll pastry sugar plum shortbread. Gingerbread marshmallow cheesecake
+				tootsie roll icing powder. Sweet roll marzipan powder tart marzipan. Marshmallow jelly dragée soufflé jelly
+				beans shortbread.</p>
+		</div>
+	</the-tabs>
+
+	<script type='module'>
+		import TheTabs from './index.js';
+		customElements.define('the-tabs', TheTabs);
+	</script>
+
+	<style>
+		[role='tab'] {
+			background-color: transparent;
+			border: none;
+			font: 1.25rem inherit inherit;
+
+			&[aria-selected='true'] {
+				border-bottom: 2px solid;
+			}
+		}
+	</style>
+</body>
+
+</html>
